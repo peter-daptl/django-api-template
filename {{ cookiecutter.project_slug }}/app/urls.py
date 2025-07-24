@@ -30,7 +30,7 @@ urlpatterns = [
     path("", RedirectView.as_view(url='/swagger/', permanent=False)),
 
     # API endpoints for the 'api' app
-    path('api/', include('api.urls')),
+    path('', include('api.urls')),
 
     # DRF Spectacular URLs for OpenAPI schema and UI
     path('schema/', SpectacularAPIView.as_view(), name='schema'), # OpenAPI schema in YAML/JSON
