@@ -1,4 +1,4 @@
-# In your generated project, open `{{ project_slug }}/api/urls.py`
+# In your generated project, open `{{ cookiecutter.project_slug }}/api/urls.py`
 # Replace its entire content with the following:
 
 from django.urls import include, path
