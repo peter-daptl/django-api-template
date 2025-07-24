@@ -1,0 +1,77 @@
+[project]
+name = "{{ cookiecutter.project_slug }}"
+version = "0.1.0"
+description = "{{ cookiecutter.project_short_description }}"
+requires-python = ">={{ cookiecutter.python_version }}"
+
+dependencies = [
+    "django=={{ cookiecutter.django_version }}",
+    "djangorestframework=={{ cookiecutter.drf_version }}",
+    "python-dotenv",
+    "djangorestframework-simplejwt", # For token authentication
+    "drf-spectacular", # Add this line for Swagger/OpenAPI docs
+]
+
+[project.optional-dependencies]
+dev = [
+    "uv",
+    "ruff",
+    "pre-commit",
+    "pytest",
+    "pytest-django",
+]
+
+[tool.ruff]
+line-length = 120
+target-version = "py313"
+exclude = [
+    ".bzr",
+    ".direnv",
+    ".eggs",
+    ".git",
+    ".hg",
+    ".mypy_cache",
+    ".nox",
+    ".pants.d",
+    ".pytype",
+    ".ruff_cache",
+    ".svn",
+    ".venv",
+    "__pypackages__",
+    "_build",
+    "buck-out",
+    "build",
+    "dist",
+    "node_modules",
+    "venv",
+]
+lint.select = [
+    "E",  # pycodestyle errors
+    "F",  # pyflakes
+    "I",  # isort
+    "B",  # flake8-bugbear
+    "UP", # pyupgrade
+    "PL", # pylint
+    "N",  # pep8-naming
+    "D",  # pydocstyle (optional, can be removed if not needed)
+]
+lint.ignore = [
+    "E501", # Line too long (handled by ruff-format)
+    "D100", # Missing docstrings (can be too strict for quick projects)
+    "D104", # Missing docstrings on __init__.py
+    "D105", # Missing docstrings on magic methods
+    "D107", # Missing docstrings on __init__
+]
+lint.unfixable = [
+    "F401",  # Unused imports - fixable by Ruff, but setting as unfixable if you prefer to manually manage imports
+]
+
+[tool.ruff.lint.isort]
+known-first-party = ["{{ cookiecutter.project_slug }}", "api", "app"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+skip-magic-trailing-comma = false
+docstring-code-format = true
+line-ending = "auto"

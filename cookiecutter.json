@@ -1,0 +1,8 @@
+{
+  "project_name": "My DRF Project",
+  "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }}",
+  "project_short_description": "A Django REST API using uv, ruff, and pre-commit.",
+  "python_version": "3.13",
+  "django_version": "5.2.4",
+  "drf_version": "3.16.0"
+}

@@ -1,0 +1,24 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.pyc
+*.pyd
+*.pyo
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+
+# Environments
+.env
+venv/
+env/
+*.sqlite3
+
+# Django stuff:
+*.log
+local_settings.py
+
+# Editor stuff
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
