@@ -1,4 +1,4 @@
-# In your generated project, open `{{ project_slug }}/api/cars/urls.py`
+# In your generated project, open `{{ cookiecutter.project_slug }}/api/cars/urls.py`
 # Replace its entire content with the following (it will be much simpler):
 
 # This file no longer needs to define a router or urlpatterns.
