@@ -7,6 +7,7 @@ class Car(models.Model):
     year = models.IntegerField()
 
     class Meta:
+        db_table = "car"
         ordering = ['make', 'model', 'year']
 
     def __str__(self):
